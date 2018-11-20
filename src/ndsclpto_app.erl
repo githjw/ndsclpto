@@ -10,6 +10,7 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
+	io:format("Hello World!~n"),
     ndsclpto_sup:start_link().
 
 stop(_State) ->
