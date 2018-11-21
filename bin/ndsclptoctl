@@ -14,7 +14,8 @@
         echo "--------------------------------------------------------------------"
 
 		set -e
-
+		ERLANG_NODE=ejabberd22333@localhost  # ejabberd@localhost
+		
 		SCRIPT=$(readlink $0 || true)
 		if [ -z $SCRIPT ]; then
 			SCRIPT=$0
@@ -25,7 +26,7 @@
 		
 		EBIN=ebin
 		ERL=erl
-		
+		ERLANG_OPTS="$ERLANG_OPTS -setcookie abc -pa ebin -s ndsclpto start"
 	
 		export ERL_LIBS
 		exec_cmd()
@@ -36,11 +37,11 @@
 		}
 		exec_erl()
 		{
-			#NODE=$1; shift
-			exec_cmd "$ERL" " -pa  ebin" "$@"
+			NODE=$1; shift
+			exec_cmd "$ERL" ${S:--}name $NODE $ERLANG_OPTS "$@"
 		}
 		
 		echo $EBIN
-		#exec_erl
+		exec_erl  $ERLANG_NODE 
 		#erl -pa ebin -s ndsclpto
-		erl  -pa ebin -s  ndsclpto start
+		#erl  -pa ebin -s  ndsclpto 
