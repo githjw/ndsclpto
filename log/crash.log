@@ -1,0 +1,17 @@
+2018-12-02 05:45:53 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.67.0>
+    registered_name: []
+    exception exit: {{bad_return,{{ndsclpto_app,start,[normal,[]]},{'EXIT',{undef,[{jid,nodeprep,[<<"DESKTOP-AMT4OLH">>],[]},{ndsclpto_config,normalize_hosts,2,[{file,"src/ndsclpto_config.erl"},{line,409}]},{ndsclpto_config,set_hosts_in_options,2,[{file,"src/ndsclpto_config.erl"},{line,398}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{ndsclpto_config,read_file,2,[{file,"src/ndsclpto_config.erl"},{line,185}]},{ndsclpto_config,load_file,1,[{file,"src/ndsclpto_config.erl"},{line,197}]},{ndsclpto_config,start,0,[{file,"src/ndsclpto_config.erl"},{line,74}]},{ndsclpto_app,start,2,[{file,"src/ndsclpto_app.erl"},{line,16}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.66.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.68.0>,normal}]
+    links: [<0.66.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:

@@ -5,4 +5,5 @@
               {applications,[kernel,stdlib]},
               {mod,{ndsclpto_app,[]}},
               {env,[]},
-              {modules,[ndsclpto,ndsclpto_app,ndsclpto_sup]}]}.
+              {modules,[ext_mod,ndsclpto,ndsclpto_app,ndsclpto_config,
+                        ndsclpto_sup]}]}.
